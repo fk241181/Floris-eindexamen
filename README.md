@@ -8,6 +8,7 @@ hierin ga ik laten zien wat ik heb gemaakt en hoe het werkt
 ik heb een datebase gemaakt in mysql (xampp) en heb zo de code gemaakt om de password te hashen zodat niemand het kan lezen
 ---
 ---
+'''
 <?php   
 require_once 'db-conn.php';   
 
@@ -25,3 +26,4 @@ echo "Alle wachtwoorden zijn nu gehashd!";
 
 unlink(__FILE__)    
 ?>  
+'''
