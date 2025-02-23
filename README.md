@@ -74,7 +74,7 @@ Bij versie 0.04 en 0.05 heb ik de sql databse toegevoegd dit heb ik gedaan zodat
 
 Installatiehandleiding voor XAMPP en een PHP-project    
 - **Stap 1: Download en installeer XAMPP**
-Ga naar de officiële website van XAMPP: [url](https://www.apachefriends.org/)
+Ga naar de officiële website van XAMPP: [XAMMP](https://www.apachefriends.org/)
 Download de juiste versie van XAMPP voor jouw besturingssysteem.
 Open het installatiebestand en volg de instructies om XAMPP te installeren.
 - **Stap 2: Plaats je project in de juiste map**
@@ -92,6 +92,6 @@ Klik op Bestand kiezen en selecteer het databasebestand (database.sql of feopdr.
 Klik op Starten om de database te importeren.
 - **Stap 5: Open het project in de browser**
 Open een webbrowser.
-Ga naar [url](http://localhost/dashboard/) om te controleren of XAMPP correct werkt.
-Verander de URL naar [url](http://localhost/examen%20floris%20van%20kleef%202c/login.php) om naar het inlogscherm van je project te gaan.
+Ga naar [Dashboard](http://localhost/dashboard/) om te controleren of XAMPP correct werkt.
+Verander de URL naar [Project](http://localhost/examen%20floris%20van%20kleef%202c/login.php) om naar het inlogscherm van je project te gaan.
 Je project draait nu lokaal op jouw apparaat en is niet toegankelijk voor anderen. Je kunt nu aan de slag met het testen en ontwikkelen van je PHP-project!
