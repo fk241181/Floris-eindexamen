@@ -27,4 +27,4 @@ echo "Alle wachtwoorden zijn nu gehashd!";
 unlink(__FILE__)    
 ?>  
 ```
-bij versie 0.02 heb ik toevoegingen gemaakt aan de homepagina en heb ik alles verbeterd.
+bij versie 0.02 heb ik toevoegingen gemaakt aan de homepagina en heb ik alles verbeterd. Ook heb ik gemaakt dat je ka ]n bestellen en ik had wat fouten met de naam dat het telkens een fout gaf en toen dacht ik dat ik het had gemaakt alleen toen kreeg ik elke keer de beschrijving en toen uiteidelijk werkte het met de naam na veel fouten. Ook de logout functie gemaakt
