@@ -33,6 +33,7 @@ Ik gebruik GitHub op mijn repository te bewerken en op te slaan. Ook hou ik hier
 Ik vind het belangrijk om een repository en versiebeheer te gebruiken, omdat dit een backup biedt voor als er iets onverwachts gebeurd met bijvoorbeeld je laptop of pc.    
 
 ---
+dit heb ik gedaan om mijn code veilig te maken. wat heb ik gedaan ik heb de passwords in de sql databse gehashed.
 ```
 <?php   
 require_once 'db-conn.php';   
