@@ -67,3 +67,31 @@ Als eerste heb ik een table gemaand admin gemaakt voor de admins, en bij orders 
 
 Dit staat dus ook in de home.php. Hierin heb ik, zoals eerder genoemd, een optie voor bon inzien toegevoegd, zodat ze klant tussendoor kan kijken wat er besteld is en wat de totaal prijs is. 
 Er kwam wel een fout voor. Het gerecht kwam niet op de homepagina terecht, maar alleen de beschrijving van deze. Dit heb ik aangepast en nu werkt het wel zoals het moet.
+
+Bij versie 0.04 en 0.05 heb ik de sql databse toegevoegd dit heb ik gedaan zodat je het gemakkelijk kan instaleren en gebruiken.
+
+# Hierbij de Instalatie handleiding.
+
+Installatiehandleiding voor XAMPP en een PHP-project
+**Stap 1: Download en installeer XAMPP**
+Ga naar de officiële website van XAMPP: [url](https://www.apachefriends.org/)
+Download de juiste versie van XAMPP voor jouw besturingssysteem.
+Open het installatiebestand en volg de instructies om XAMPP te installeren.
+**Stap 2: Plaats je project in de juiste map**
+Navigeer naar de installatiemap van XAMPP (standaard is dit C:\xampp).
+Open de map htdocs.
+Kopieer en plak je PHP-projectmap in htdocs.
+**Stap 3: Start Apache en MySQL**
+Open het XAMPP Control Panel.
+Start de Apache-server door op de knop Start naast "Apache" te klikken.
+Start de MySQL-server door op de knop Start naast "MySQL" te klikken.
+**Stap 4: Importeer de database**
+Klik in het XAMPP Control Panel op Admin bij MySQL om phpMyAdmin te openen.
+In phpMyAdmin, klik bovenaan op het tabblad Importeren.
+Klik op Bestand kiezen en selecteer het databasebestand (database.sql of feopdr.sql).
+Klik op Starten om de database te importeren.
+**Stap 5: Open het project in de browser**
+Open een webbrowser.
+Ga naar [url](http://localhost/dashboard/) om te controleren of XAMPP correct werkt.
+Verander de URL naar [url](http://localhost/examen%20floris%20van%20kleef%202c/login.php) om naar het inlogscherm van je project te gaan.
+Je project draait nu lokaal op jouw apparaat en is niet toegankelijk voor anderen. Je kunt nu aan de slag met het testen en ontwikkelen van je PHP-project!
