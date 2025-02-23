@@ -1,7 +1,7 @@
 
 # Welkom op mijn eindexamen opdracht!!
 - Floris van Kleef 2C 2166895
-
+ 
 In mijn eindexamen opdracht ga ik laten zien wat ik heb gemaakt, en hoe alles werkt. Ik heb een database gemaakt in mysql (xampp) en heb zo de code gemaakt om de wachtwoorden te hashen, zodat deze beveiligd zijn en niemand ze kan zien.   
 
 # Opdracht beschrijving.
