@@ -27,3 +27,4 @@ echo "Alle wachtwoorden zijn nu gehashd!";
 unlink(__FILE__)    
 ?>  
 ```
+bij versie 0.02 heb ik toevoegingen gemaakt aan de homepagina en heb ik alles verbeterd.

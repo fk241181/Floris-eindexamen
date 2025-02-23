@@ -15,44 +15,38 @@ $query = "SELECT * FROM menu";
 $result = $conn->query($query);
 
 // Verwerken van de bestelling
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Controleer of zowel menu_ids als aantallen zijn ingediend
-    if (isset($_POST['menu_ids']) && isset($_POST['aantallen'])) {
-        $menu_ids = $_POST['menu_ids'];
-        $aantallen = $_POST['aantallen'];
+if (isset($_POST['menu_ids']) && isset($_POST['aantallen']) && isset($_POST['TVG'])) {
+    $menu_ids = $_POST['menu_ids'];
+    $aantallen = $_POST['aantallen'];
+    $TVGs = $_POST['TVG']; // Toevoegingen/allergieën ophalen
 
-        // Itereren door alle items en de bestelling opslaan in de database
-        for ($i = 0; $i < count($menu_ids); $i++) {
-            $menu_id = $menu_ids[$i];
-            $aantal = (int) $aantallen[$i];  // Zorg ervoor dat het aantal een integer is
+    for ($i = 0; $i < count($menu_ids); $i++) {
+        $menu_id = $menu_ids[$i];
+        $aantal = (int) $aantallen[$i];
+        $TVG = htmlspecialchars($TVGs[$i]); // Voorkom XSS-aanvallen
 
-            // Alleen invoeren als het aantal groter dan 0 is
-            if ($aantal > 0) {
-                // Haal de naam van het menu-item op uit de database
-                $query = "SELECT beschrijving FROM menu WHERE id = ?";
-                $stmt = $conn->prepare($query);
-                $stmt->bind_param("i", $menu_id);
-                $stmt->execute();
-                $result = $stmt->get_result();
-                $row = $result->fetch_assoc();
-                $menu_naam = $row['beschrijving'];
+        if ($aantal > 0) {
+            $query = "SELECT naam FROM menu WHERE id = ?";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("i", $menu_id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+            $menu_naam = $row['naam'];
 
-                // Bereid de query voor om de bestelling met naam op te slaan
-                $stmt = $conn->prepare("INSERT INTO orders (tafel, menu_id, aantal, menu_naam) VALUES (?, ?, ?, ?)");
-                $stmt->bind_param("iiis", $tafel, $menu_id, $aantal, $menu_naam);
+            // Update de database-invoeging met de TVG-waarde
+            $stmt = $conn->prepare("INSERT INTO orders (tafel, menu_id, aantal, menu_naam, TVG) VALUES (?, ?, ?, ?, ?)");
+            $stmt->bind_param("iiiss", $tafel, $menu_id, $aantal, $menu_naam, $TVG);
 
-                if (!$stmt->execute()) {
-                    echo "Fout bij bestelling: " . $conn->error;
-                }
+            if (!$stmt->execute()) {
+                echo "Fout bij bestelling: " . $conn->error;
             }
         }
-
-        // Succesbericht na de bestelling
+    }  // Succesbericht na de bestelling
         echo "<script>alert('Bestelling geplaatst!');</script>";
-    }
 }
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -69,21 +63,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <thead class="table-dark">
                 <tr>
                     <th>Afbeelding</th>
+                    <th>Naam</th>
                     <th>Beschrijving</th>
                     <th>Prijs</th>
                     <th>Aantal</th>
+                    <th>Extra toevoegingen/allergieën</th>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($row = $result->fetch_assoc()) { ?>
                 <tr>
                     <td><img src="images/<?php echo $row['afbeelding']; ?>" width="50"></td>
+                    <td><?php echo htmlspecialchars($row['naam']); ?></td>
                     <td><?php echo htmlspecialchars($row['beschrijving']); ?></td>
                     <td>&euro;<?php echo number_format($row['prijs'], 2, ',', '.'); ?></td>
                     <td>
                         <input type="hidden" name="menu_ids[]" value="<?php echo $row['id']; ?>">
                         <input type="number" name="aantallen[]" value="0" min="0" class="form-control">
                     </td>
+                    <td>
+    <input type="text" name="TVG[]" class="form-control" placeholder="Bijv. geen ui, extra kaas">
+</td>
                 </tr>
                 <?php } ?>
             </tbody>
@@ -92,6 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit" class="btn btn-primary">Bestelling Plaatsen</button>
         </div>
     </form>
+    <a href="bon-klant.php" class="btn btn-success">Bekijk Bonnetje</a>
     <div class="text-center mt-4">
         <a href="logout.php" class="btn btn-danger">Uitloggen</a>
     </div>
