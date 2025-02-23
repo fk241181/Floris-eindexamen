@@ -88,7 +88,7 @@ Start de MySQL-server door op de knop Start naast "MySQL" te klikken.
 - **Stap 4: Importeer de database**
 Klik in het XAMPP Control Panel op Admin bij MySQL om phpMyAdmin te openen.
 In phpMyAdmin, klik bovenaan op het tabblad Importeren.
-Klik op Bestand kiezen en selecteer het databasebestand (database.sql of feopdr.sql).
+Klik op Bestand kiezen en selecteer het databasebestand **(database.sql of feopdr.sql).**
 Klik op Starten om de database te importeren.
 - **Stap 5: Open het project in de browser**
 Open een webbrowser.
