@@ -4,7 +4,16 @@
 
 In mijn eindexamen opdracht ga ik laten zien wat ik heb gemaakt, en hoe alles werkt. Ik heb een database gemaakt in mysql (xampp) en heb zo de code gemaakt om de wachtwoorden te hashen, zodat deze beveiligd zijn en niemand ze kan zien.   
 
-**User Stories** 
+# Opdracht beschrijving.
+
+       Ik heb de opdracht gekregen om een website te maken voor een restaurant. Het menu moet via een laptop te zien zijn, en moet makkelijk te gebruiken zijn voor zowel personeel als de klant. 
+
+Ik ga een php project maken die een menu displayed, die ervoor zorgt dat de klant kan zien wat er te bestellen is, dit vervolgens doet en zo wordt het doorgestuurd naar de keuken. Ik heb de website toegankelijk gemaakt door alle producten op een plek te zetten, en het makkelijk te maken voor de klant om dingen toe te voegen aan de bestelling.
+
+
+
+   Ik moest verschillende user stories bedenken, en deze vervolgens uitwerken in mijn code. Ik heb de userstories één voor één aangepakt en uitgewerkt.
+**User Stories**    
 ik heb deze user stories uitgewerkt in mijn project.
    
 2. Als restaurantbezoeker wil ik een bestelling kunnen plaatsen via het 
