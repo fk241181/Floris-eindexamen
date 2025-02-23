@@ -70,7 +70,7 @@ Er kwam wel een fout voor. Het gerecht kwam niet op de homepagina terecht, maar 
 
 Bij versie 0.04 en 0.05 heb ik de sql databse toegevoegd dit heb ik gedaan zodat je het gemakkelijk kan instaleren en gebruiken.
 
-# Hierbij de Instalatie handleiding.
+# Hierbij de Installatie handleiding.
 
 Installatiehandleiding voor XAMPP en een PHP-project    
 - **Stap 1: Download en installeer XAMPP**
