@@ -2,7 +2,22 @@
 # Welkom op mijn eindexamen opdracht!!
 - Floris van Kleef 2C 2166895
 
-In mijn eindexamen opdracht ga ik laten zien wat ik heb gemaakt, en hoe alles werkt. Ik heb een database gemaakt in mysql (xampp) en heb zo de code gemaakt om de wachtwoorden te hashen, zodat deze beveiligd zijn en niemand ze kan zien.     
+In mijn eindexamen opdracht ga ik laten zien wat ik heb gemaakt, en hoe alles werkt. Ik heb een database gemaakt in mysql (xampp) en heb zo de code gemaakt om de wachtwoorden te hashen, zodat deze beveiligd zijn en niemand ze kan zien.   
+
+**User Stories** 
+ik heb deze user stories uitgewerkt in mijn project.
+   
+2. Als restaurantbezoeker wil ik een bestelling kunnen plaatsen via het 
+menu zodat ik sneller geholpen word zonder te wachten op 
+personeel. 
+3. Als restaurantbeheerder wil ik alle bestellingen realtime kunnen 
+inzien zodat ik de keuken efficiënter kan laten werken. 
+4. Als restaurantbeheerder wil ik de inhoud van het menu kunnen 
+bewerken zodat ik gemakkelijk wijzigingen kan doorvoeren (zoals 
+nieuwe gerechten of prijzen). 
+5. Als restaurantbezoeker wil ik een bevestiging van mijn bestelling 
+ontvangen zodat ik zeker weet dat deze correct is verwerkt.
+
 
 Ik gebruik GitHub op mijn repository te bewerken en op te slaan. Ook hou ik hier het versiebeheer bij. Ik doe dit met GitHub, omdat het voor mij makkelijk in gebruik is, en GitHub is gemakkelijk te linken met Microsoft Visual Studio. Hierdoor staat alles gelijk online en kan ik het snel laten zien.     
 
